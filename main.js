@@ -7,11 +7,11 @@ const {
 } = require("./fbPosterCore");
 
 const COOKIE_PATH = "./fb_cookies.json"; // <--- Store your facebook cookies in this path
-const GROUP_IDS = [
+const GROUP_IDS = [ // <--- Input your Group IDs here
   // "1304108733255469", 
   // "875879243827594", 
   // "220388567778406",
-  
+
   // "339385442911908",
   // "154822255070129",
   // "1542924922603421",
@@ -27,7 +27,7 @@ const GROUP_IDS = [
 ];
 
 const POST_CONTENT = [
-  "🐻 Pass all 5️⃣0️⃣K Q7"
+  "🐻 Pass all 5️⃣0️⃣K Q7" // <--- Input your content here
 ].join('\n');
 
 (async () => {
