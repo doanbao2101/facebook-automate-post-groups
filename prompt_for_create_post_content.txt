@@ -1,0 +1,17 @@
+Please provide me content for posting facebook for selling old teddy bear by vietnamese. 
+Here is my some key point:
+```
+- Pass nhanh 50k cho tất cả
+```
+
+
+Your response should be shorten, add some icon this format like this:
+```
+const POST_CONTENT = [
+  "🔥 4❌10 – 3PN, 3 máy lạnh – 6TR/tháng!",
+  "📍 Hẻm 2056 Huỳnh Tấn Phát, Nhà Bè (gần chùa Lá, hẻm rộng thoáng)",
+  "🏠 1 lầu • 3PN • 2WC • Bếp • Ban công • Wifi có sẵn",
+  "🛵 Xe máy vào tận nhà, 2 hướng đi",
+  "📌 P.S: Nhà sạch đẹp, dọn vào ở ngay!"
+].join('\n');
+```
