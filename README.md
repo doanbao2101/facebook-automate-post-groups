@@ -43,7 +43,7 @@ Automate posting to Facebook groups with ease! This lightweight Node.js tool let
 ## 🚀 Usage
 
 1. **Prepare your session cookies**:
-   Export your Facebook session cookies and save them as `fb_cookies.json` in the project root.
+   Export your Facebook session cookies and save them as `fb_cookies.json` in the project root (Using `EditThisCookie (V3) 3.0.4`)
 
 2. **Add images** (if needed):
    Place images in the `img/` folder to include them in posts.
@@ -51,7 +51,7 @@ Automate posting to Facebook groups with ease! This lightweight Node.js tool let
 3. **Run the script**:
 
    ```bash
-   node post_to_group.js
+   node main.js
    ```
 
 4. **Customize** the `post_to_group.js` file:
@@ -76,10 +76,19 @@ facebook-automate-post-groups/
 
 ---
 
+
 ## ⚠️ Notes
 
-* 🔄 Make sure your session cookies are **valid and current**.
-* 📛 Use responsibly to avoid violating **Facebook’s platform policies**.
+* 🔄 Ensure your session cookies are **valid and up to date**.
+* 📛 Post responsibly to stay within **Facebook's platform policies**.
+
+### 🕒 **Post Frequency Guidelines:**
+
+* **1-3 posts per day** to prevent being flagged as spam.
+* **2-4 hour interval** between posts.
+* Avoid **back-to-back** or rapid posting.
+* **Engage** with the group through comments and likes.
+* For **new accounts**, limit posting in the first 30 days.
 
 ---
 
