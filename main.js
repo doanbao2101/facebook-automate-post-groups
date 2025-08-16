@@ -8,27 +8,26 @@ const {
 
 const COOKIE_PATH = "./fb_cookies.json"; // <--- Store your facebook cookies in this path
 const GROUP_IDS = [ // <--- Input your Group IDs here
-  // "1304108733255469", 
-  // "875879243827594", 
-  // "220388567778406",
-
-  // "339385442911908",
-  // "154822255070129",
-  // "1542924922603421",
-  // "278630919629992",
-  // "288052937344755",
-  // "356726222129931",
-  // "145124054340947",
-  // "588676015159605",
-  // "275674538732628",
-  // "275674538732628",
-  // "453764322476971"
-
-];
+  // "vieclamquan7phumyhung",
+  // "viecllam007",
+  // "1132960307894059",
+  // "2719994268040685",
+  // "vieclamsvquan7",
+  "tuyendunghcmsg",
+  "758291866374708"
+ ];
 
 const POST_CONTENT = [
-  "🐻 Pass all 5️⃣0️⃣K Q7" // <--- Input your content here
+  "👩‍🍳 TUYỂN PHỤ BẾP + GIAO HÀNG 🛵",
+  "📍 Nhà Cung Cấp Calo ULAW",
+  "",
+  "🕖 Ca sáng: 7h – 12h (giao hàng 11h – 12h)",
+  "💰 22k/giờ ➕ Phụ cấp giao hàng 30k/ngày",
+  "🙌 Không cần kinh nghiệm – sẽ được hướng dẫn",
+  "",
+  "📩 Inbox thêm chi tiết!"
 ].join('\n');
+
 
 (async () => {
   const images = getImageFilesFromFolder();
