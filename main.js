@@ -8,26 +8,14 @@ const {
 
 const COOKIE_PATH = "./fb_cookies.json"; // <--- Store your facebook cookies in this path
 const GROUP_IDS = [ // <--- Input your Group IDs here
-  // "1304108733255469", 
-  // "875879243827594", 
-  // "220388567778406",
-
-  // "339385442911908",
-  // "154822255070129",
-  // "1542924922603421",
-  // "278630919629992",
-  // "288052937344755",
-  // "356726222129931",
-  // "145124054340947",
-  // "588676015159605",
-  // "275674538732628",
-  // "275674538732628",
-  // "453764322476971"
-
+"1764221823770070",
+"1833274956819913",
+"2299563390328949",
+"nhabanhcm"
 ];
 
 const POST_CONTENT = [
-  "🐻 Pass all 5️⃣0️⃣K Q7" // <--- Input your content here
+ 
 ].join('\n');
 
 (async () => {
@@ -44,3 +32,15 @@ const POST_CONTENT = [
   console.log("✅ All group posts completed.");
   await browser.close();
 })();
+
+```
+🏡 Bán Đất Thạnh Xuân, Quận 12
+- Hẻm 31, Thạnh Xuân 14, Quận 12 (hướng Đông Bắc).
+- 66.7m² (thổ cư 60.4m²).
+- 3.744 tỷ VNĐ (56,2 triệu/m², thương lượng).
+Lợi thế:
+- Vị trí gần mặt tiền, thuận lợi kinh doanh & an cư.
+- Đối diện Pi City High Park, tiện ích đầy đủ.
+- Tiềm năng tăng trưởng cao, giá trị tăng 5-8% mỗi năm.
+#BấtĐộngSản #ThạnhXuân #ĐấtQuận12
+```
