@@ -33,10 +33,10 @@ async function postToGroup(page, groupId, postContent, imagePaths) {
 }
 
 /**
- * Uploads images and waits for preview to load.
- */
+ * Uploads images and waits for preview to load. 	https://static.xx.fbcdn.net/rsrc.php/yX/r/8_VnccIZfRa.webp
+ */ 
 async function uploadImages(page, imagePaths) {
-  const icon = await page.waitForSelector('img[src*="Ivw7nhRtXyo.png"]', { timeout: 10000 });
+  const icon = await page.waitForSelector('img[src*="8_VnccIZfRa.webp"]', { timeout: 10000 });
   const fileInput = await icon.evaluateHandle(img => {
     let parent = img.closest('div');
     while (parent && !parent.querySelector('input[type="file"]')) {
