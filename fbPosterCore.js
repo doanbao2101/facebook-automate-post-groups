@@ -10,26 +10,54 @@ async function launchBrowserWithCookies(cookiePath) {
   const page = await browser.newPage();
   const cookies = JSON.parse(fs.readFileSync(cookiePath, "utf8"));
   await page.setCookie(...cookies);
-  return { browser, page };
+  await page.close();
+  return { browser };
 }
 
 /**
  * Posts content and images to a specific Facebook group.
  */
-async function postToGroup(page, groupId, postContent, imagePaths) {
+async function postToGroup(browser, groupId, postContent, imagePaths) {
   const groupUrl = `https://www.facebook.com/groups/${groupId}`;
-  await page.goto(groupUrl, { waitUntil: "networkidle2" });
+  const page = await browser.newPage();
 
-  const postBox = await page.waitForSelector('::-p-xpath(//span[text()="Bạn viết gì đi..."])', { timeout: 30000 });
-  await postBox.click();
-  await delay(3000);
-  await page.keyboard.type(postContent, { delay: 30 });
+  try {
+    await gotoWithRetry(page, groupUrl);
 
-  await uploadImages(page, imagePaths);
+    const postBox = await page.waitForSelector('::-p-xpath(//span[text()="Bạn viết gì đi..."])', { timeout: 30000 });
+    await postBox.click();
+    await delay(3000);
+    await page.keyboard.type(postContent, { delay: 30 });
 
-  const postButton = await page.waitForSelector('div[aria-label="Post"], div[aria-label="Đăng"]', { timeout: 10000 });
-  await postButton.click();
-  console.log(`✅ [${getFormattedTime()}] Post published to group: ${groupId}`);
+    await uploadImages(page, imagePaths);
+
+    const postButton = await page.waitForSelector('div[aria-label="Post"], div[aria-label="Đăng"]', { timeout: 10000 });
+    await postButton.click();
+    console.log(`✅ [${getFormattedTime()}] Post published to group: ${groupId}`);
+    return page;
+  } catch (error) {
+    await page.close();
+    throw error;
+  }
+}
+
+async function gotoWithRetry(page, url, attempts = 3) {
+  for (let attempt = 1; attempt <= attempts; attempt++) {
+    try {
+      await page.goto(url, {
+        waitUntil: "domcontentloaded",
+        timeout: 60000
+      });
+      return;
+    } catch (error) {
+      const isDetachedFrameError = error.message.includes("detached Frame");
+      if (!isDetachedFrameError || attempt === attempts) {
+        throw error;
+      }
+
+      await delay(2000);
+    }
+  }
 }
 
 /**
